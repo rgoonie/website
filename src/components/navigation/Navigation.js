@@ -1,16 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+import * as ROUTE from './routes';
+import '../../css/Navigation.css';
 
 export class Navigation extends Component {
     render() {
         return (
-            <div className="navigation-bar">
-                <p>Rajeev Goonie</p>
-                <p>About</p>
-                <p>Blogs</p>
-                <p>Projects</p>
-                <p>Contact</p>
-                <hr/>
-            </div>
+            <header className="navigation-bar">
+                <Link className="nav-button home" to={ROUTE.LANDING}>Rajeev Goonie</Link>
+
+                <div className="main-content">
+                    <Link className="nav-button about" to={ROUTE.ABOUT}>About</Link>
+                    <Link className="nav-button blogs" to={ROUTE.BLOGS}>Blogs</Link>
+                    <Link className="nav-button projects" to={ROUTE.PROJECTS}>Projects</Link>
+                    <Link className="nav-button contact" to={ROUTE.CONTACT}>Contact</Link>
+                </div>
+            
+            </header>
         )
     }
 }

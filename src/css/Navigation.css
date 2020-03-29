@@ -1,0 +1,15 @@
+.navigation-bar{
+    border-bottom: 1px red solid;
+    display: flex;
+}
+
+.main-content{
+    display: inherit;
+    justify-content: right;
+}
+
+.navigation-bar .nav-button{
+    padding: 10px 7px;
+    margin: 10px 7px;
+    text-decoration: none;
+}
