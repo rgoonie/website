@@ -8,14 +8,12 @@ export class Navigation extends Component {
         return (
             <header className="navigation-bar">
                 <Link className="nav-button home" to={ROUTE.LANDING}>Rajeev Goonie</Link>
-
-                <div className="main-content">
+                <div className="content-links">
                     <Link className="nav-button about" to={ROUTE.ABOUT}>About</Link>
                     <Link className="nav-button blogs" to={ROUTE.BLOGS}>Blogs</Link>
                     <Link className="nav-button projects" to={ROUTE.PROJECTS}>Projects</Link>
                     <Link className="nav-button contact" to={ROUTE.CONTACT}>Contact</Link>
                 </div>
-            
             </header>
         )
     }

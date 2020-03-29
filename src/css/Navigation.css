@@ -1,15 +1,18 @@
-.navigation-bar{
-    border-bottom: 1px red solid;
+header{
     display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #930110 solid;
+    width: 100%;
 }
 
-.main-content{
-    display: inherit;
-    justify-content: right;
+header .content-links{
+    padding: 10px 7px;
+    margin: 10px 7px;
 }
 
-.navigation-bar .nav-button{
+header .nav-button{
     padding: 10px 7px;
     margin: 10px 7px;
     text-decoration: none;
+    font-size: 150%;   
 }
