@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Nav from './components/Navigation'
+import Nav from './components/navigation/Navigation'
 
 import './css/App.css';
 
