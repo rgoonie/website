@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
+import Typist from 'react-typist'
 
 export class Landing extends Component {
     render() {
         return (
             <div className="page landing" style={pageStyle}>
                 <div className="main-content" style={contentStyle}>
-                    <h1 style={headerOneStyle}>Rajeev Goonie</h1>
-                    <p style={paragraphStyle}>The Programmer with a Life</p>
+                    <Typist cursor={cursorStyle}
+                        >
+                        <h1 style={headerOneStyle}>Rajeev Goonie</h1>
+                    </Typist>
+                    <Typist cursor={cursorStyle}>
+                        <Typist.Delay ms={1500} />
+                        <span style={paragraphStyle}>The Programmer without a Life</span>
+                        <Typist.Backspace count={10} delay={1000}/>
+                        <span style={paragraphStyle}>{' '} a "Actual" Life</span>
+                    </Typist>
                 </div>
             </div>
         )
@@ -35,6 +44,11 @@ const paragraphStyle = {
     fontSize: "3vh",
     fontStyle: "normal",
     fontWeight: "normal",
+    display: "inline",    
+}
+
+const cursorStyle = {
+    show: false,
 }
 
 
