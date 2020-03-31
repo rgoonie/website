@@ -6,7 +6,7 @@ export class Navigation extends Component {
     render() {
         return (
             <header style={headerStyle} className="navigation-bar">
-                <div ><Link style={buttonLinkStyle} className="nav-button home" hidden={false} to={ROUTE.LANDING}>Rajeev Goonie</Link></div>
+                <div style={contentLinks}><Link style={buttonLinkStyle} className="nav-button home" hidden={false} to={ROUTE.LANDING}>Rajeev Goonie</Link></div>
                 <div style={contentLinks} className="content-links">
                     <Link style={buttonLinkStyle} className="nav-button about" to={ROUTE.ABOUT}>About</Link>
                     <Link style={buttonLinkStyle} className="nav-button blogs" to={ROUTE.BLOGS}>Blogs</Link>
