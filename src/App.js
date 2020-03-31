@@ -17,7 +17,7 @@ function App() {
     <Router >
       <div className="App">
 
-        <Nav>hello</Nav>
+        <Nav/>
 
         <Route exact path={ROUTES.LANDING} component={Landing}/>
         <Route exact path={ROUTES.ABOUT} component={About}/>
