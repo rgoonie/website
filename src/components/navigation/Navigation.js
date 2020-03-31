@@ -3,16 +3,37 @@ import {Link} from 'react-router-dom';
 import * as ROUTE from './routes';
 
 export class Navigation extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            hideHomeLink: true,
+        };
+    }
+
+    showHome(){
+        this.setState({hideHomeLink: false});
+    }
+
+    hideHome(){
+        this.setState({hideHomeLink: true});
+    }
+
     render() {
         return (
             <header style={headerStyle} className="navigation-bar">
-                <div ><Link style={buttonLinkStyle} className="nav-button home" hidden={false} to={ROUTE.LANDING}>Rajeev Goonie</Link></div>
-                <div style={contentLinks} className="content-links">
-                    <Link style={buttonLinkStyle} className="nav-button about" to={ROUTE.ABOUT}>About</Link>
-                    <Link style={buttonLinkStyle} className="nav-button blogs" to={ROUTE.BLOGS}>Blogs</Link>
-                    <Link style={buttonLinkStyle} className="nav-button projects" to={ROUTE.PROJECTS}>Projects</Link>
-                    <Link style={buttonLinkStyle} className="nav-button contact" to={ROUTE.CONTACT}>Contact</Link>
+                <div style={contentLinksStyle} >
+                    <Link style={buttonLinkStyle} className="nav-button home" hidden={this.state.hideHomeLink} to={ROUTE.LANDING} onClick={ () => this.hideHome() }>
+                        Rajeev Goonie
+                    </Link>
                 </div>
+                
+                <div style={contentLinksStyle} className="content-links">
+                    <Link style={buttonLinkStyle} className="nav-button about" to={ROUTE.ABOUT} onClick={ () => this.showHome() }>About</Link>
+                    <Link style={buttonLinkStyle} className="nav-button blogs" to={ROUTE.BLOGS} onClick={ () => this.showHome() }>Blogs</Link>
+                    <Link style={buttonLinkStyle} className="nav-button projects" to={ROUTE.PROJECTS} onClick={ () => this.showHome() }>Projects</Link>
+                    <Link style={buttonLinkStyle} className="nav-button contact" to={ROUTE.CONTACT} onClick={ () => this.showHome() }>Contact</Link>
+                </div>
+
             </header>
         )
     }
@@ -29,7 +50,7 @@ const headerStyle = {
 }
 
 
-const contentLinks = {
+const contentLinksStyle = {
     padding: "10px 7px",
     margin: "10px 7px",
 }
