@@ -6,15 +6,13 @@ export class Landing extends Component {
         return (
             <div className="page landing" style={pageStyle}>
                 <div className="main-content" style={contentStyle}>
-                    <Typist cursor={cursorStyle}
-                        >
+                    <Typist cursor={cursorStyle}>
                         <h1 style={headerOneStyle}>Rajeev Goonie</h1>
                     </Typist>
-                    <Typist cursor={cursorStyle}>
-                        <Typist.Delay ms={1500} />
+                    <Typist startDelay={1500} cursor={cursorStyle}>
                         <span style={paragraphStyle}>The Programmer without a Life</span>
                         <Typist.Backspace count={10} delay={1000}/>
-                        <span style={paragraphStyle}>{' '} a "Actual" Life</span>
+                        <span style={paragraphStyle}>{' '} an "Actual" Life</span>
                     </Typist>
                 </div>
             </div>
