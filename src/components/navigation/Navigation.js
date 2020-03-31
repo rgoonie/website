@@ -6,13 +6,20 @@ export class Navigation extends Component {
     render() {
         return (
             <header style={headerStyle} className="navigation-bar">
-                <div style={contentLinks}><Link style={buttonLinkStyle} className="nav-button home" hidden={false} to={ROUTE.LANDING}>Rajeev Goonie</Link></div>
+                <div style={contentLinks} className="home-link">
+                    <Link style={buttonLinkStyle} className="nav-button home" hidden={false} to={ROUTE.LANDING}>
+                        Rajeev Goonie
+                    </Link>
+                </div>
+                
+                
                 <div style={contentLinks} className="content-links">
                     <Link style={buttonLinkStyle} className="nav-button about" to={ROUTE.ABOUT}>About</Link>
                     <Link style={buttonLinkStyle} className="nav-button blogs" to={ROUTE.BLOGS}>Blogs</Link>
                     <Link style={buttonLinkStyle} className="nav-button projects" to={ROUTE.PROJECTS}>Projects</Link>
                     <Link style={buttonLinkStyle} className="nav-button contact" to={ROUTE.CONTACT}>Contact</Link>
                 </div>
+
             </header>
         )
     }
