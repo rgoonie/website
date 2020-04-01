@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
-import Nav from '../navigation/DesktopNav/DesktopNav';
+import Nav from '../navigation/Navigation/Naviagation';
 import * as ROUTES from '../navigation/routes';
 
 import Landing from '../pages/Landing/Landing';
