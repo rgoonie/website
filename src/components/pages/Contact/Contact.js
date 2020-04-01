@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Contact.css';
 
 export class Contact extends Component {
     render() {
@@ -10,4 +11,4 @@ export class Contact extends Component {
     }
 }
 
-export default Contact
+export default Contact;

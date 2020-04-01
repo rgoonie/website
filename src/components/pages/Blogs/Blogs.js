@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Blogs.css';
 
 export class Blogs extends Component {
     render() {
@@ -10,4 +11,4 @@ export class Blogs extends Component {
     }
 }
 
-export default Blogs
+export default Blogs;

@@ -1,16 +1,16 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
-import Nav from './components/navigation/Navigation';
-import * as ROUTES from './components/navigation/routes';
+import Nav from '../navigation/DesktopNav/DesktopNav';
+import * as ROUTES from '../navigation/routes';
 
-import Landing from './components/pages/Landing';
-import About from './components/pages/About';
-import Blogs from './components/pages/Blogs';
-import Projects from './components/pages/Projects';
-import Contact from './components/pages/Contact';
+import Landing from '../pages/Landing/Landing';
+import About from '../pages/About/About';
+import Blogs from '../pages/Blogs/Blogs';
+import Projects from '../pages/Projects/Projects';
+import Contact from '../pages/Contact/Contact';
 
-import './css/App.css';
+import './App.css';
 
 function App() {
   return (

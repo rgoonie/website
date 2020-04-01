@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import Typist from 'react-typist'
+import React, { Component } from 'react';
+import Typist from 'react-typist';
+import './Landing.css';
 
 export class Landing extends Component {
     render() {

@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './About.css';
 
 export class About extends Component {
     render() {
@@ -10,4 +11,4 @@ export class About extends Component {
     }
 }
 
-export default About
+export default About;
