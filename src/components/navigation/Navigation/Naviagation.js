@@ -13,14 +13,14 @@ export class Navigation extends Component {
                     <div className="mobile-nav">
                         <MobileNav/>
                     </div>
-                    <div className="nav-logo"><Link to="#">Rajeev Goonie</Link></div>
+                    <div className="nav-logo"><Link to={ROUTE.LANDING}>Rajeev Goonie</Link></div>
                     <div className="spacer"/>
                     <div className="nav-items">
                         <ul>
-                            <li><Link to="#"> About    </Link></li>
-                            <li><Link to="#"> Blogs    </Link></li>
-                            <li><Link to="#"> Projects </Link></li>
-                            <li><Link to="#"> Contact  </Link></li>
+                            <li><Link to={ROUTE.ABOUT}> About    </Link></li>
+                            <li><Link to={ROUTE.BLOGS}> Blogs    </Link></li>
+                            <li><Link to={ROUTE.PROJECTS}> Projects </Link></li>
+                            <li><Link to={ROUTE.CONTACT}> Contact  </Link></li>
 
                         </ul>
                     </div>
