@@ -1,0 +1,19 @@
+.about-page {
+    margin-top: 70px;
+}
+
+.about-header {
+    font-size: 150%;
+    font-weight: normal;
+    margin: 10px;
+}
+
+.about-description {
+    margin: 10px;
+}
+
+.about-description p {
+    font-size: 60%;
+    text-align: left;
+    padding: 10px;
+}
