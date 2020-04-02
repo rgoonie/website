@@ -4,8 +4,10 @@ import './Projects.css';
 export class Projects extends Component {
     render() {
         return (
-            <div>
-                <p>Projects Page</p>
+            <div className="projects-page">
+                <div className="projects-content">
+                    <h1 className="projects-header">Projects Page</h1>
+                </div>
             </div>
         )
     }

@@ -4,8 +4,10 @@ import './Blogs.css';
 export class Blogs extends Component {
     render() {
         return (
-            <div>
-                <p>Blogs Page</p>
+            <div className="blogs-page">
+                <div className="blogs-content">
+                    <h1 className="blogs-header">Blogs Page</h1>
+                </div>
             </div>
         )
     }
