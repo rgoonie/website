@@ -5,8 +5,8 @@ import './Landing.css';
 export class Landing extends Component {
     render() {
         return (
-            <div className="page landing">
-                <div className="main-content">
+            <div className="landing-page">
+                <div className="landing-content">
                     <Typist cursor={cursorStyle}>
                         <h1 className="heading">Rajeev Goonie</h1>
                     </Typist>
