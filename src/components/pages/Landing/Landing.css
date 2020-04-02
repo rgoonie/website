@@ -6,20 +6,20 @@
     justify-content: center;
 }
 
-.header {
-    font-size: 10vh;
+.heading {
+    font-size: 300%;
     font-style: normal;
     font-weight: normal;
+    margin: auto 20px;
 }
 
 .tag-line {
-    font-size: 3vh;
     font-style: normal;
     font-weight: normal;
     display: inline;
 }
 
-@media (max-width: 487px) {
+@media (max-width: 414px) {
     .tag-line {
         max-width: 300px;
     }
