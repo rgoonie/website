@@ -6,21 +6,21 @@
     justify-content: center;
 }
 
-.heading {
+.landing-heading {
     font-size: 300%;
     font-style: normal;
     font-weight: normal;
     margin: auto 20px;
 }
 
-.tag-line {
+.landing-tag-line {
     font-style: normal;
     font-weight: normal;
     display: inline;
 }
 
 @media (max-width: 414px) {
-    .tag-line {
+    .landing-tag-line {
         max-width: 300px;
     }
 }
