@@ -31,12 +31,9 @@
     
 }
 
-.nav-items a:hover {
-    color: #930110;
-}
-
-.nav-items a:active {
-    color: #930110;
+.nav-items a, .nav-logo a {
+    color: #070707;
+    text-decoration: none;
 }
 
 @media (max-width: 842px) {
