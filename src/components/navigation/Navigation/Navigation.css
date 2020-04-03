@@ -3,7 +3,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: white;
+    background: #070707;
+    color: #f2f2f2;
     border-bottom: #930110 solid 1px;
     height: 56px;
 }
@@ -32,7 +33,6 @@
 }
 
 .nav-items a, .nav-logo a {
-    color: #070707;
     text-decoration: none;
 }
 

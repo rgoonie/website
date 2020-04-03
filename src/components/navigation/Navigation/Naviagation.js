@@ -13,6 +13,7 @@ const StyledButton = styled(Button)({
     borderRadius: "10px",
     margin: "0",
     padding: "0",
+    color: "#f2f2f2",
 });
 
 export class Navigation extends Component {

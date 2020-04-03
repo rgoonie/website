@@ -1,8 +1,39 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import { styled } from '@material-ui/core';
 import {Drawer, List, ListItem, ListItemIcon, ListItemText} from '@material-ui/core';
 import {Menu, HomeTwoTone, InfoTwoTone, BookTwoTone, AccountTreeTwoTone, AccountBoxTwoTone} from '@material-ui/icons';
 import * as ROUTE from '../routes';
+
+const StyledLink = styled(Link)({
+    color: "#f2f2f2",
+    textDecoration: "none",
+});
+
+const StyledList = styled(List)({
+    background: "#070707",
+    height: "100%"
+});
+
+const StyledHomeIcon = styled(HomeTwoTone)({
+    color: "#930110",
+});
+
+const StyledInfoIcon = styled(InfoTwoTone)({
+    color: "#930110",
+});
+
+const StyledBookIcon = styled(BookTwoTone)({
+    color: "#930110",
+});
+
+const StyledAccountTreeIcon = styled(AccountTreeTwoTone)({
+    color: "#930110",
+});
+
+const StyledAccountBoxIcon = styled(AccountBoxTwoTone)({
+    color: "#930110",
+});
 
 export class MobileNav extends Component{
     constructor(props){
@@ -25,42 +56,42 @@ export class MobileNav extends Component{
             <div>
                 <Menu onClick={toggleDrawer()}/>
                 <Drawer open={this.state.drawOpen} onClose={toggleDrawer()}>
-                    <List>
-                        <Link to={ROUTE.LANDING}>
+                    <StyledList>
+                        <StyledLink to={ROUTE.LANDING}>
                             <ListItem button onClick={toggleDrawer()}>
-                                <ListItemIcon><HomeTwoTone/></ListItemIcon>
+                                <ListItemIcon><StyledHomeIcon/></ListItemIcon>
                                 <ListItemText primary={"Home"}/>
                             </ListItem>
-                        </Link>
+                        </StyledLink>
 
-                        <Link to={ROUTE.ABOUT}>
+                        <StyledLink to={ROUTE.ABOUT}>
                             <ListItem button onClick={toggleDrawer()}>
-                                <ListItemIcon><InfoTwoTone/></ListItemIcon>
+                                <ListItemIcon><StyledInfoIcon/></ListItemIcon>
                                 <ListItemText primary={"About"}/>
                             </ListItem>
-                        </Link>
+                        </StyledLink>
 
-                        <Link to={ROUTE.BLOGS}>
+                        <StyledLink to={ROUTE.BLOGS}>
                             <ListItem button onClick={toggleDrawer()} >
-                                <ListItemIcon><BookTwoTone/></ListItemIcon>
+                                <ListItemIcon><StyledBookIcon/></ListItemIcon>
                                 <ListItemText primary={"Blogs"}/>
                             </ListItem>
-                        </Link>
+                        </StyledLink>
 
-                        <Link to={ROUTE.PROJECTS}>
+                        <StyledLink to={ROUTE.PROJECTS}>
                             <ListItem button onClick={toggleDrawer()}>
-                                <ListItemIcon><AccountTreeTwoTone/></ListItemIcon>
+                                <ListItemIcon><StyledAccountTreeIcon/></ListItemIcon>
                                 <ListItemText primary={"Projects"}/>
                             </ListItem>
-                        </Link>
+                        </StyledLink>
 
-                        <Link to={ROUTE.CONTACT}>
+                        <StyledLink to={ROUTE.CONTACT}>
                             <ListItem button onClick={toggleDrawer()}>
-                                <ListItemIcon><AccountBoxTwoTone/></ListItemIcon>
+                                <ListItemIcon><StyledAccountBoxIcon/></ListItemIcon>
                                 <ListItemText primary={"Contact"}/>
                             </ListItem>
-                        </Link>
-                    </List>
+                        </StyledLink>
+                    </StyledList>
                 </Drawer>
             </div>
         );
