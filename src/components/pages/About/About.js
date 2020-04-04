@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import RajeevImg from '../../../assets/rajeev_photo.JPG';
+import RajeevResume from '../../../assets/RajeevGoonieSoftwareDeveloperResume.pdf';
 import './About.css';
 
 export class About extends Component {
@@ -9,10 +11,31 @@ export class About extends Component {
                 <div className="about-content">
                     <h1 className="about-header">Who am I?</h1>
 
-                    <div className="about-description">
-                        <p>Lorizzle ipsum mofo sit amizzle, mah nizzle adipiscing elit. Nullam crunk velit, shizznit volutpizzle, mah nizzle hizzle, shizzle my nizzle crocodizzle vel, arcu. Pellentesque eget tortor. Sed erizzle. Ma nizzle izzle dolizzle dapibus turpis tempizzle crackalackin. Mauris pellentesque nibh izzle turpizzle. Check it out in mah nizzle. Bow wow wow eleifend rhoncizzle da bomb. Crackalackin sheezy habitasse gizzle dictumst. Donec dapibizzle. Curabitizzle , pretizzle brizzle, mattizzle ac, eleifend vitae, go to hizzle. I'm in the shizzle suscipit. Integizzle sempizzle velizzle sizzle sheezy.</p>
-                        <p>Lorizzle ipsum mofo sit amizzle, mah nizzle adipiscing elit. Nullam crunk velit, shizznit volutpizzle, mah nizzle hizzle, shizzle my nizzle crocodizzle vel, arcu. Pellentesque eget tortor. Sed erizzle. Ma nizzle izzle dolizzle dapibus turpis tempizzle crackalackin. Mauris pellentesque nibh izzle turpizzle. Check it out in mah nizzle. Bow wow wow eleifend rhoncizzle da bomb. Crackalackin sheezy habitasse gizzle dictumst. Donec dapibizzle. Curabitizzle , pretizzle brizzle, mattizzle ac, eleifend vitae, go to hizzle. I'm in the shizzle suscipit. Integizzle sempizzle velizzle sizzle sheezy.</p>
-                        <p>Lorizzle ipsum mofo sit amizzle, mah nizzle adipiscing elit. Nullam crunk velit, shizznit volutpizzle, mah nizzle hizzle, shizzle my nizzle crocodizzle vel, arcu. Pellentesque eget tortor. Sed erizzle. Ma nizzle izzle dolizzle dapibus turpis tempizzle crackalackin. Mauris pellentesque nibh izzle turpizzle. Check it out in mah nizzle. Bow wow wow eleifend rhoncizzle da bomb. Crackalackin sheezy habitasse gizzle dictumst. Donec dapibizzle. Curabitizzle , pretizzle brizzle, mattizzle ac, eleifend vitae, go to hizzle. I'm in the shizzle suscipit. Integizzle sempizzle velizzle sizzle sheezy.</p>
+                    <div className="about-content-box">
+
+                        <div className="about-description">
+                            <img className="rajeev-img" src={RajeevImg} alt="Rajeev Goonie"/>
+                            <p>
+                                Hello! My name is Rajeev Goonie and I am a Senior at Texas Tech University. 
+                                I am currently pursuing my Bachelor's Degree in Computer Science with a Minor in Mathematics.
+                                With this completed, I aspired to be the best Software Developer that I can.
+                            </p>
+                            
+                            <p>
+                                I have been programming for about 6 years now, where I worked on numerous projects such as a Maze Generator, 
+                                Mock Online Shopping System, VR Banking System, and many more (check out my <a href="https://github.com/rgoonie" target="_blank" rel="noopener noreferrer">GitHub</a>)!
+                                When it comes to programming, I always look forward to challenge and learning something new, even if it causes me to go more than 24 hours of no sleep.
+                            </p>
+
+                            <p>
+                                A little more into my personal life, I have a ton fun facts. While I was born in Houston, Texas, I am proud of my Trinidadian heritage from both my parents.
+                                If I'm not programming or studying, you can usually find me with my family or friends just hanging out and having fun. I enjoy watching Bollywood hits, playing outside,
+                                and playing card games. I'm not too good at pool (8-ball or 9-ball), but I won't shy away from a match.
+                            </p>
+
+                            <p>If you are ever in need of my resume, you can find a copy of it right <a href={RajeevResume} target="_blank" rel="noopener noreferrer">here</a>.</p>
+
+                        </div>
                     </div>
 
                 </div>
