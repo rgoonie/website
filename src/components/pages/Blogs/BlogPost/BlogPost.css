@@ -1,0 +1,28 @@
+.blog-post {
+    border: #f2f2f2 solid 1px;
+    border-radius: 20px;
+    margin: 20px;
+
+    flex-basis: 320px;
+}
+
+.blog-post-title-box {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.blog-post-title {
+    margin-left: 15px;
+    text-align: left;
+    font-size: 120%;
+}
+
+.blog-post-description, .blog-post-date {
+    font-size: 62%;
+    padding: 5px;
+    text-align: left;
+    margin: 3px 0px 3px 15px;
+}
