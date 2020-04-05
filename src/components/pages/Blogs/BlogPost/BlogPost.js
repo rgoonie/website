@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './BlogPost.css';
 import { Drawer } from '@material-ui/core';
-import ReactMarkdown from 'react-markdown';
-import TempBlog from '../../../../assets/temp-markdown.md';
 
 export class BlogPost extends Component {
     constructor(props){
@@ -10,16 +8,6 @@ export class BlogPost extends Component {
         this.state = {
             blogOpen: false,
         }
-    }
-
-    extractMarkdownAsString(file){
-        if(file){
-            let reader = new FileReader();
-            reader.readAsText(file, "UTF-8");
-            reader.EMPTY
-        }
-        else
-            return "Unable to load blog";
     }
 
     render() {
