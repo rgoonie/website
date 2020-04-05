@@ -1,12 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    font-size: calc(10px + 2vmin);
 }
 
 html {
     background: #070707;
     color: #f2f2f2;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: calc(10px + 2vmin);
 }
