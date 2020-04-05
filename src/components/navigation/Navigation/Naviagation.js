@@ -14,6 +14,7 @@ const StyledButton = styled(Button)({
     margin: "0",
     padding: "0",
     color: "#f2f2f2",
+    fontFamily: "'Courier New', Courier, monospace",
 });
 
 export class Navigation extends Component {
