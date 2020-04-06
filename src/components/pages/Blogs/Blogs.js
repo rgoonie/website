@@ -2,9 +2,38 @@ import React, { Component } from 'react';
 import BlogPost from './BlogPost/BlogPost';
 import './Blogs.css';
 
-import BlogTest from '../../../assets/blog-files/temp-markdown.md';
+import { storage } from '../../../config/firebase'
 
 export class Blogs extends Component {
+
+    constructor(props){
+        super(props)
+
+        this.state = {
+            blogURLs: [],
+        }
+
+        this.getBlogURLs()
+    }
+
+    getBlogURLs() {
+
+        const storageRef = storage.ref();
+
+        storageRef.child('blogFiles/').listAll().then( result =>{
+            result.items.forEach( fileRef => {
+                //console.log("File Ref " + fileRef.toString());
+
+                fileRef.getDownloadURL().then(url => {
+                    const updatedURLs = this.state.blogURLs;
+                    updatedURLs.push(url)
+
+                    this.setState({ blogURLs: updatedURLs})
+                });
+            });
+        });
+    }
+
     render() {
         return (
             <div className="blogs-page">
@@ -12,14 +41,11 @@ export class Blogs extends Component {
                     <h1 className="blogs-header">Blogs Page</h1>
 
                     <div className="blog-post-all">
-                        <BlogPost title="Test Blog 1" description="This is an example blog post" postDate="January 15, 5555" mdFile={BlogTest}/>
-                        <BlogPost title="Test Blog 2" description="Just checking ordering" postDate="Today" mdFile={'test'} />
-                        <BlogPost title="Test Blog 3" description="This is an example blog post" postDate="January 15, 5555" mdFile={BlogTest}/>
-                        <BlogPost title="Test Blog 4" description="Just checking ordering" postDate="Today" mdFile={'test'} />
-                        <BlogPost title="Test Blog 5" description="This is an example blog post" postDate="January 15, 5555" mdFile={BlogTest}/>
-                        <BlogPost title="Test Blog 6" description="Just checking ordering" postDate="Today" mdFile={'test'} />
-                        <BlogPost title="Test Blog 7" description="This is an example blog post" postDate="January 15, 5555" mdFile={BlogTest}/>
-                        <BlogPost title="Test Blog 8" description="Just checking ordering" postDate="Today" mdFile={'test'} />
+                        {this.state.blogURLs.map(url => (
+                            <React.Fragment key={url}>
+                                <BlogPost mdFile={url} />
+                            </React.Fragment>
+                        ))}
                     </div>
 
                 </div>

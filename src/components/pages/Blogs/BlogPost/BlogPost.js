@@ -14,14 +14,31 @@ export class BlogPost extends Component {
         super(props);
         this.state = {
             blogOpen: false,
-            content: ""
+            title: "",
+            description: "",
+            writeDate: "",
+            content: "",
         }
 
         fetch(this.props.mdFile)
         .then((r) => r.text())
         .then(text => {
             this.setState({content: text})
+            
+            const contentSplit = this.state.content.split("\n");
+            if(contentSplit.length >= 6){
+                const blogTitle = contentSplit[0].substr(2);
+                const blogDescr = contentSplit[1];
+                const blogDate = contentSplit[5];
+
+                this.setState({title: blogTitle, description: blogDescr, writeDate: blogDate});
+            }
         })
+        .catch( err => {
+            this.setState({title: "Unable to load Blog", description: "Please reload page to try again", writeDate: "Unable to load Blog", content: "Unable to load Blog"});
+        })
+
+        
     }
 
     render() {
@@ -37,10 +54,10 @@ export class BlogPost extends Component {
         return (
             <div className="blog-post" onClick={toggleDrawer()}>
                 <div className="blog-post-title-box">
-                    <h1 className="blog-post-title">{this.props.title}</h1>
+                    <h1 className="blog-post-title">{this.state.title}</h1>
                 </div>
-                <p className="blog-post-description">{this.props.description}</p>
-                <p className="blog-post-date">Posted: {this.props.postDate}</p>
+                <p className="blog-post-description">{this.state.description}</p>
+                <p className="blog-write-date">{this.state.writeDate}</p>
 
                 <Drawer anchor="bottom" open={this.state.blogOpen} onClose={toggleDrawer()} PaperProps={{square: false}}>
                     <div className="blog-markdown-container">
