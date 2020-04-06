@@ -78,12 +78,12 @@ export class MobileNav extends Component{
                             </ListItem>
                         </StyledLink>
 
-                        <StyledLink to={ROUTE.PROJECTS}>
+                        <a href="https://github.com/rgoonie" target="_blank" rel="noopener noreferrer" style={{color: "#f2f2f2", textDecoration: "none",}}>
                             <ListItem button onClick={toggleDrawer()}>
                                 <ListItemIcon><StyledAccountTreeIcon/></ListItemIcon>
                                 <ListItemText primary={"Projects"}/>
                             </ListItem>
-                        </StyledLink>
+                        </a>
 
                         <StyledLink to={ROUTE.CONTACT}>
                             <ListItem button onClick={toggleDrawer()}>

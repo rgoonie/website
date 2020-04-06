@@ -31,7 +31,7 @@ export class Navigation extends Component {
                         <ul>
                             <li><Link to={ROUTE.ABOUT}>    <StyledButton> About    </StyledButton></Link></li>
                             <li><Link to={ROUTE.BLOGS}>    <StyledButton> Blog     </StyledButton></Link></li>
-                            <li><Link to={ROUTE.PROJECTS}> <StyledButton> Projects </StyledButton></Link></li>
+                            <li><a href="https://github.com/rgoonie" target="_blank" rel="noopener noreferrer"> <StyledButton> Projects </StyledButton></a></li>
                             <li><Link to={ROUTE.CONTACT}>  <StyledButton> Contact  </StyledButton></Link></li>
 
                         </ul>
