@@ -26,3 +26,15 @@
     text-align: left;
     margin: 3px 0px 3px 15px;
 }
+
+/*-------*/
+
+.blog-markdown-container {
+    all: initial;
+    margin: 20px;
+}
+
+.markdown-body {
+    max-width: 900px;
+    margin: auto;
+}

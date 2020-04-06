@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
 import './BlogPost.css';
-import { Drawer } from '@material-ui/core';
+import './github.markdown.css';
+import { Drawer, styled } from '@material-ui/core';
+import Markdown from 'react-markdown';
+import { Close } from '@material-ui/icons';
+
+const StyledCloseIcon = styled(Close)({
+    float: "right",
+});
 
 export class BlogPost extends Component {
     constructor(props){
         super(props);
         this.state = {
             blogOpen: false,
+            content: ""
         }
+
+        fetch(this.props.mdFile)
+        .then((r) => r.text())
+        .then(text => {
+            this.setState({content: text})
+        })
     }
 
     render() {
@@ -23,14 +37,17 @@ export class BlogPost extends Component {
         return (
             <div className="blog-post" onClick={toggleDrawer()}>
                 <div className="blog-post-title-box">
-                    <h1 className="blog-post-title">{this.props.children}</h1>
+                    <h1 className="blog-post-title">{this.props.title}</h1>
                 </div>
-                <p className="blog-post-description">{this.props.content}This is a placeholder hook</p>
-                <p className="blog-post-date">Posted: January 01, 9999</p>
+                <p className="blog-post-description">{this.props.description}</p>
+                <p className="blog-post-date">{this.props.postDate}</p>
 
                 <Drawer anchor="bottom" open={this.state.blogOpen} onClose={toggleDrawer()} PaperProps={{square: false}}>
-                    <div className="blog-markdown">
-                        This is where a blog post is rendered.
+                    <div className="blog-markdown-container">
+                        <StyledCloseIcon onClick={toggleDrawer()}/>
+                        <div className="markdown-body">
+                            <Markdown source={this.state.content}/>
+                        </div>
                     </div>
                 </Drawer>
 

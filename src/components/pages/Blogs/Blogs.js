@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import BlogPost from './BlogPost/BlogPost';
-
 import './Blogs.css';
+
+import BlogTest from '../../../assets/blog-files/temp-markdown.md';
 
 export class Blogs extends Component {
     render() {
@@ -11,15 +12,7 @@ export class Blogs extends Component {
                     <h1 className="blogs-header">Blogs Page</h1>
 
                     <div className="blog-post-all">
-                        <BlogPost>This is a title</BlogPost>
-                        <BlogPost>Short Title</BlogPost>
-                        <BlogPost>Short Title</BlogPost>
-                        <BlogPost content="This is an extension. ">This is a very very long title</BlogPost>
-                        <BlogPost content="This is an extension. ">Title 5</BlogPost>
-                        <BlogPost>Title 6</BlogPost>
-                        <BlogPost>Title 7</BlogPost>
-                        <BlogPost>Title 8</BlogPost>
-                        <BlogPost>Title 9</BlogPost>
+                        <BlogPost title="Test Blog" description="This is an example blog post" postDate="January 15, 5555" mdFile={BlogTest}/>
                     </div>
 
                 </div>
