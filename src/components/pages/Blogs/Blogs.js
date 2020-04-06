@@ -12,7 +12,14 @@ export class Blogs extends Component {
                     <h1 className="blogs-header">Blogs Page</h1>
 
                     <div className="blog-post-all">
-                        <BlogPost title="Test Blog" description="This is an example blog post" postDate="January 15, 5555" mdFile={BlogTest}/>
+                        <BlogPost title="Test Blog 1" description="This is an example blog post" postDate="January 15, 5555" mdFile={BlogTest}/>
+                        <BlogPost title="Test Blog 2" description="Just checking ordering" postDate="Today" mdFile={'test'} />
+                        <BlogPost title="Test Blog 3" description="This is an example blog post" postDate="January 15, 5555" mdFile={BlogTest}/>
+                        <BlogPost title="Test Blog 4" description="Just checking ordering" postDate="Today" mdFile={'test'} />
+                        <BlogPost title="Test Blog 5" description="This is an example blog post" postDate="January 15, 5555" mdFile={BlogTest}/>
+                        <BlogPost title="Test Blog 6" description="Just checking ordering" postDate="Today" mdFile={'test'} />
+                        <BlogPost title="Test Blog 7" description="This is an example blog post" postDate="January 15, 5555" mdFile={BlogTest}/>
+                        <BlogPost title="Test Blog 8" description="Just checking ordering" postDate="Today" mdFile={'test'} />
                     </div>
 
                 </div>
