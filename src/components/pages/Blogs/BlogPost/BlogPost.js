@@ -40,7 +40,7 @@ export class BlogPost extends Component {
                     <h1 className="blog-post-title">{this.props.title}</h1>
                 </div>
                 <p className="blog-post-description">{this.props.description}</p>
-                <p className="blog-post-date">{this.props.postDate}</p>
+                <p className="blog-post-date">Posted: {this.props.postDate}</p>
 
                 <Drawer anchor="bottom" open={this.state.blogOpen} onClose={toggleDrawer()} PaperProps={{square: false}}>
                     <div className="blog-markdown-container">
