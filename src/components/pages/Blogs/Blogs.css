@@ -12,5 +12,7 @@
 .blog-post-all {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    
 }
