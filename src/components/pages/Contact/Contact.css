@@ -67,3 +67,12 @@
     max-width: 100px;
     border-radius: 10px;
 }
+
+.contact-form-sent {
+    font-family: Arial, Helvetica, sans-serif;
+    color: green;
+    border: green 2px solid;
+    background: #79c879;
+    margin: 20px auto auto;
+    padding: 10px;
+}

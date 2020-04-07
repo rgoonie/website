@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { database } from '../../../config/firebase';
 import './Contact.css';
 
 export class Contact extends Component {
@@ -14,16 +15,20 @@ export class Contact extends Component {
                 name: "",
                 email: "",
                 message: "",
-            }
+            },
+            sentDisplay: "none",
         }
     }
 
     handleNameChange = e => {
         const {value} = e.target;
+        const regexName = /^\s*[A-Za-z'-]+(\s*[A-Za-z'-]+)*\s*$/;
 
         const errors = this.state.formErrors;
         if(value.length === 0)
             errors.name = "Please enter your name";
+        else if( !regexName.test(value) )
+            errors.name = "Please enter a valid name";
         else
             errors.name = "";
 
@@ -70,8 +75,18 @@ export class Contact extends Component {
         if(message.length === 0) errors.message = "Enter a message";
 
         if(errors.name === "" && errors.email === "" && errors.message === ""){
-            console.log("submitted Message");
+            const date = new Date();
+            const messagesRef = database.ref('messages');
+            const newMessageRef = messagesRef.push();
+            newMessageRef.set({
+                name: name,
+                email: email, 
+                message: message,
+                date: date.toString()
+            });
 
+            this.setState({name: "", email: "", message: "", sentDisplay: ""});
+            e.target.reset();
         }
         else{
             this.setState({formErrors: errors});
@@ -106,6 +121,9 @@ export class Contact extends Component {
                             <div className="contact-form-submit-container">
                                 <input className="contact-form-submit" type="submit"/>
                             </div>
+
+                            <p className="contact-form-sent" style={{display: this.state.sentDisplay}}>Your Messages Has Been Sent</p>
+
                         </form>
                     </div>
 

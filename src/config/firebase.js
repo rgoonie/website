@@ -1,5 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/storage';
+import 'firebase/database'
 
 var firebaseConfig = {
   apiKey: "AIzaSyDWFJLCPqxgs-lumBw7izYmWfORw0xyNvw",
@@ -12,7 +13,9 @@ var firebaseConfig = {
   measurementId: "G-QE1EJ724VG",
 };
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-const storage = firebaseApp.storage()
+firebase.initializeApp(firebaseConfig);
 
-export { storage, firebaseApp as Firebase }
+const storage = firebase.storage()
+const database = firebase.database();
+
+export { storage, database}
