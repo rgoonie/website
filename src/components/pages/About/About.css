@@ -1,0 +1,52 @@
+.about-page {
+    margin-top: 70px;
+}
+
+.about-header {
+    font-size: 250%;
+    font-weight: normal;
+    margin: 10px;
+}
+
+.rajeev-img {
+    margin: 0 20px;
+    border-radius: 20px;
+    border: #930110 solid 1.5px; 
+}
+
+.about-description p {
+    text-align: left;
+    margin: 20px 20px;
+    font-size: 80%;
+}
+
+.about-description a {
+    font-size: inherit;
+    color: inherit;
+}
+
+.about-description a:hover {
+    color: #930110;
+}
+
+.about-description a:active {
+    color: #930110;
+}
+
+.about-content-box:after {
+    content: "";
+    clear: both;
+}
+
+@media (min-width: 843px) {
+    .rajeev-img {
+        float: left;
+        width: 20%; 
+    }
+}
+
+@media (max-width: 842px){
+    .rajeev-img {
+        width: 50%
+    }
+}
